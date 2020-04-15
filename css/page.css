@@ -1,0 +1,141 @@
+/*reset样式*/
+#J_main_container{
+    background: #f5f7f9;
+}
+html{
+    color: #000;
+    background: #f5f7f9;
+    width:100%;
+    height:100%;
+}
+body{
+         font: 14px/1.5  "微软雅黑","PingFang SC", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+         color: #14191e;
+        background: #f5f7f9;
+         -webkit-font-smoothing:antialiased;
+         -webkit-overflow-scrolling:touch;
+     }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: couriernew, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+/*列表默认样式*/
+ul,
+ol {
+    list-style: none;
+}
+/*链接默认下划线*/
+fieldset,
+img {
+    border: 0;
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*设置默认字体*/
+input{font-family:"Microsoft YaHei";}
+
+/*清除ios下的button默认样式*/
+input[type=button],button{
+    -webkit-appearance:none;
+    outline:none
+}
+
+
+/**/
+/*清除浮动*/
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;zoom:1}
+.none{display: none}
+
+.fl {
+    float: left;
+    display: inline;
+}
+.fr {
+    float: right;
+    display: inline;
+}
+.pr {
+    position: relative;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.w1000 {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.ib {
+    display: inline-block;
+}
+a {text-decoration: none; outline: none; color: #999; -webkit-transition:all 0.15s linear;-moz-transition:all 0.15s linear;-ms-transition:all 0.15s linear;-o-transition:all 0.15s linear; cursor: pointer;}
+a:hover {text-decoration: underline; color: #f00;}
+a:link{text-decoration: none}
+.clred {
+    color: red;
+}
+.fam{font-family: arial,"Hiragino Sans GB","Hiragino Sans GB W3" !important;}

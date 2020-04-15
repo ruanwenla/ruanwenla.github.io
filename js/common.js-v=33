@@ -1,0 +1,76 @@
+$(function(){
+    function op_show(ele){
+        ele.animate({'opacity':'1'},'2000');
+        setTimeout(function(){
+            ele.animate({'opacity':'0'},'2000');
+        },2000)
+    }
+    
+    $(document).on('click','.login-close',function(){
+        $(".model-wrap").hide();
+    });
+    $(document).on('click','.btn-login',function(){
+        $(".model-wrap").show();
+    });
+
+    $(window).scroll(function () {
+        var mm=$(document).scrollTop();
+        if(mm>=120){
+            $(".header-nav").addClass("header-nav-fixed");
+        }else{
+            $(".header-nav").removeClass("header-nav-fixed");
+        }
+    });
+
+    $("#login-btn").unbind('click').click(function(e) {
+
+        if(  $("#checkBox").is(':checked')){
+            $.ajax({
+                type:'post',
+                url:'login',
+                dataType: 'json',
+                data:$("#login-form").serializeArray(),
+                success:function(d) {
+                    if(!d.result) {
+                        layer.msg(d.message);
+                        // $('.login-tip').html(d.message).fadeIn(1000).delay(1000).fadeOut(2000);
+                        // $('.fix_tip').text(d.message);
+                        // op_show($('.fix_tip'));
+                    }else {
+                        window.location.href = "../index.htm"/*tpa=http://www.qhchcb.com/adm*/;
+                    }
+
+                }
+            });
+        } else {
+            alert('请勾选《掌投服务条款》')
+        }
+
+    });
+    
+    
+    //注册
+    $("#login-btn-register").unbind('click').click(function(e) {
+        $.ajax({
+            type:'post',
+            url:'login',
+            dataType: 'json',
+            data:$("#login-form-register").serializeArray(),
+            success:function(d) {
+                if(!d.result) {
+                    layer.msg(d.message);
+
+                    // $('.login-tip').html(d.message).fadeIn(1000).delay(1000).fadeOut(2000);
+                    // $('.fix_tip').text(d.message);
+                    // op_show($('.fix_tip'));
+                }else {
+                    window.location.href = "../index.htm"/*tpa=http://www.qhchcb.com/adm*/;
+                }
+
+            }
+        });
+    });//结束
+    //结束
+    //结束
+});
+//结束

@@ -1,0 +1,25 @@
+$("#login-btn2").click(function(){
+    window.location.href='http://www.dyrww.com/member/login';
+});
+
+/**
+ * Created by Admin on 2017/9/19.
+ */
+$(function(){
+    //banner广告图
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        // 如果需要分页器
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+
+    $('')
+})
